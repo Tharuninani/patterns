@@ -1,0 +1,284 @@
+           Pattern 1
+
+1.Question
+Write a program to generate the given pattern.
+
+if n = 4,
+   *
+  **
+ ***
+****
+
+INPUT & OUTPUT FORMAT:
+
+Input consists of a single integer, n.
+Refer to the sample input and output for formatting specifications.
+SAMPLE INPUT:
+
+4
+SAMPLE OUTPUT:
+   *
+  **
+ ***
+****
+
+
+Code:
+n=int(input())
+for i in range(1,n+1,1):
+    for s in range(i,n,1):
+        print(" ",end='')
+    for j in range(1,i+1,1):
+        print("*",end='')
+    print()
+    
+
+       Pattern 2
+
+2.Question
+Write a program to generate the given pattern.
+if n = 4,
+****
+*  *
+*  *
+****
+
+ INPUT & OUTPUT FORMAT:
+
+Input consists of a single integer, n. n is always an even integer. n>=6.
+Refer to the sample input and output for formatting specifications.
+Text in bold represents the input.
+SAMPLE INPUT & OUTPUT 1:
+6
+******
+*    *
+*    *
+*    *
+*    *
+******
+
+
+SAMPLE INPUT & OUTPUT 2:
+4
+****
+*  *
+*  *
+****
+
+Code:
+n=int(input())
+for i in range(1,n+1,+1):
+    for j in range(1,n+1,+1):
+        if(i==1 or i==n or j==1 or j==n):
+           print("*",end="") 
+        else:
+           print(end=" ")
+    print()
+    
+
+        Pattern 3
+
+3.Question
+
+Write a program to generate the given pattern.
+if n=4,
+   *
+  * *
+ *   *
+*     *
+ *   *
+  * *
+   *
+
+INPUT & OUTPUT FORMAT:
+
+Input consists of a single integer, n.
+Refer sample input and output for formatting specifications.
+Text in bold represents the input.
+
+SAMPLE INPUT & OUTPUT 1:
+6
+     *
+    * *
+   *   *
+  *     *
+ *       *
+*         *
+ *       *
+  *     *
+   *   *
+    * *
+     *
+
+Code:
+n=int(input())
+for i in range(0,n,+1):
+    for j in range(0,n-i-1):
+        print(' ',end='')
+    for j in range(0,2*i+1,+1):
+        if j==0 or j==2*i:
+            print('*',end='')
+        else:
+            print(' ',end='')
+    print()
+for i in range(0,n-1,+1):
+    for j in range(0,i+1,+1):
+        print(' ',end='')
+    for j in range(0,2*(n-i-1)-1,+1):
+        if j==0 or j==2*(n-i-1)-2:
+            print('*',end='')
+        else:
+            print(' ',end='')
+    print()
+
+        Pattern 4
+
+4.Question
+
+Write a program to generate the given pattern.
+If n = 4,
+
+1
+2 2
+3 3 3
+4 4 4 4
+
+INPUT & OUTPUT FORMAT:
+
+Input consists of a single integer, n. Assume that n>=3.
+Refer to the sample input and output for formatting specifications.
+Text in bold represents the input.
+
+SAMPLE INPUT & OUTPUT 1:
+
+5
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5 
+
+Code:
+n=int(input())
+for i in range(1,n+1,1):
+    for j in range(0,i,1):
+        print(i,end='')
+        print(" ",end='')
+    print()  
+     
+
+     Pattern 5
+
+5.Question
+Write a program to generate the given pattern.
+if n=4,
+
+4 
+3 3 
+2 2 2 
+1 1 1 1 
+
+INPUT & OUTPUT FORMAT:
+
+Input consists of a single integer, n.
+Refer to the sample input and output for formatting specifications.
+Text in bold represents the input.
+
+SAMPLE INPUT & OUTPUT 1:
+
+5
+5 
+4 4 
+3 3 3 
+2 2 2 2 
+1 1 1 1 1 
+
+Code:
+n=int(input())
+for i in range(1,n+1,+1):
+    for j in range(1,i+1,+1):
+        print((n-i)+1,end=" ")
+    print() 
+     
+
+         Pattern 6
+6.Question
+Write a program to generate the given pattern.
+if n = 5,
+
+*   *
+ * *
+  *
+ * *
+*   *
+
+ 
+
+INPUT & OUTPUT FORMAT:
+
+Input consists of a single integer, n. 
+Refer to the sample input and output for formatting specifications.
+Text in bold represents the input.
+
+SAMPLE INPUT & OUTPUT 1:
+
+5
+*   *
+ * *
+  *
+ * *
+*   *
+
+
+Code:
+n=int(input())
+for i in range(0,n,+1):
+    for j in range(0,n,+1):
+        if i==j or i+j==n-1:
+            print("*",end='')
+        else:
+            print(" ",end='')
+    print()
+
+    
+     Pattern 7
+
+7.Question
+Write a program to generate the given pattern. 
+if n = 5,
+
+    1 
+   1 1 
+  1 2 1 
+ 1 3 3 1 
+1 4 6 4 1 
+
+INPUT & OUTPUT FORMAT:
+
+Input consists of a single integer, n.
+Refer to the sample input and output for formatting specifications.
+Text in bold represents the input.
+
+SAMPLE INPUT & OUTPUT 1:
+5
+    1 
+   1 1 
+  1 2 1 
+ 1 3 3 1 
+1 4 6 4 1 
+
+
+
+Code:
+n=int(input())
+a=1
+for i in range(1,n+1,+1):
+    for j in range(1,n-i+1,+1):
+        print(" ",end='')
+    for j in range(0,i,+1):
+        if j==0 or i==0:
+            a=1
+        else:
+            a=a*(i-j)//j
+        print(a,end=' ')
+    print()
